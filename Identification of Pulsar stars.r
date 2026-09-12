@@ -19,7 +19,7 @@ library(neuralnet)
 library(nnet)
 
 # LOADING THE DATASET
-df_train = read.csv('/Users/devikarajasekar/Documents/SCHOOL/Identification of Pulsar stars/Project/pulsar_data_train.csv')
+df_train = read.csv('pulsar_data_train.csv')
 df_test = NULL
 
 
@@ -102,7 +102,7 @@ corrplot::corrplot(cor(df_train))
 
 #4) Finding the important variables:
 
-# Now that the preprocessing is complete, let’s visually examine how the predictors influence the Y (Purchase). 
+# Now that the preprocessing is complete, let’s visually examine how the predictors influence the target class. 
 # In this problem, the X variables are numeric whereas the Y is categorical. So how to gauge if a given X is an 
 # important predictor of Y? A simple common sense approach is, if you group the X variable by the categories of 
 # Y, a significant mean shift amongst the X’s groups is a strong indicator (if not the only indicator) that X 
